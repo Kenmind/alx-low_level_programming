@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *Main entry point
+ *main - entry point
  *
  *Description: Prints "Programing is like a multilingual puzle"
  *
@@ -9,6 +9,6 @@
  */
 int main(void)
 {
-  puts("\"Programing is like a multilingual puzzle");
-  return (0);
+puts("\"Programing is like a multilingual puzzle");
+return (0);
 }

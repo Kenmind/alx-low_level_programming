@@ -1,29 +1,32 @@
+
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - determine if number is positive or negative
+ * main - print single digit numbers
  *
- * Description: program will assign a random number to the variable n each time
- * it is executed.
+ * Description: print single digit numbers with commas
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int n;
+	int i;
 
+	i = 48;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n == 0)
-		printf("%d is zero\n", n);
-	else if (n < 0)
-		printf("%d is negative\n", n);
-	else
-		printf("%d is positive\n", n);
+	while (i < 58)
+	{
+		putchar(i);
+		if (i != 57)
+		{
+			putchar(44);
+			putchar(32);
+		}
+		i++;
+	}
+
+	putchar(10);
 
 	return (0);
 }

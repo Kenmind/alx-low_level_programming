@@ -1,29 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - determine if number is positive or negative
+ * main - print the letters of the alphabet
  *
- * Description: program will assign a random number to the variable n each time
- * it is executed.
+ * Description: print the letters of the alphabet except e, q
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int n;
+	int i = 97;
 
-
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n == 0)
-		printf("%d is zero\n", n);
-	else if (n < 0)
-		printf("%d is negative\n", n);
-	else
-		printf("%d is positive\n", n);
+	while (i < 123)
+	{
+		if (i != 101 && i != 113)
+		{
+			putchar(i);
+		}
+		i++;
+	}
+	putchar(10);
 
 	return (0);
 }

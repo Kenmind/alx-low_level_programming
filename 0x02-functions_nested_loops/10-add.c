@@ -1,4 +1,4 @@
-#include "home.h"
+#include "main.h"
 
 /**
  * add - adds two integers

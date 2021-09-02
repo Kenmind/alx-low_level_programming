@@ -14,6 +14,6 @@ while (c < 10)
 {
 _putchar(c++);
 }
-_putchar(c);
+_putchar("c\n");
 
 }

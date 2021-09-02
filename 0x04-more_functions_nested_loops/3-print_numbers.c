@@ -12,8 +12,8 @@ int c = 0;
 
 while (c < 10)
 {
-_putchar(c++);
+  _putchar(c++);
 }
-_putchar(\n);
+_putchar('\n');
 
 }

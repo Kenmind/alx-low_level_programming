@@ -10,23 +10,17 @@
 
 void print_array(int *a, int n)
 {
-int i, count;
+int kennedy;
 
-i = 0;
-count = 1;
-
-if (n < 0)
-n = 0;
-
-if (n > 0)
+for (kennedy = 0; kennedy < n; kennedy++)
 {
-while (a[i] != '\0' && count < n)
-{
-printf("%d, ", a[i]);
-i++;
-count++;
+printf("%d", a[kennedy]);
+
+if (kennedy == n - 1)
+continue;
+
+printf(", ");
 }
 
-printf("%d\n", a[i]);
-}
+printf("\n");
 }

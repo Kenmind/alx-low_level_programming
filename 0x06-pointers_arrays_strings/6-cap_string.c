@@ -1,35 +1,55 @@
+#include <stdio.h>
 #include "main.h"
 
+
 /**
-* cap_string - capitalizes the first letter of each word in a string
-* @str: string
-* Return: 0
-*/
-
-char *cap_string(char *str)
+ * isLower - determines whether ascii is lowercase
+ * @c: character
+ * Return: 1 if true, 0 if false
+ */
+int isLower(char c)
 {
-int i;
-for (i = 0; str[i] != '\0'; i++)
-{
-if (i == 0)
-if ((str[i] >= 97 && str[i] <= 122))
-str[i] = str[i] - 32;
-continue;
+	return (c >= 97 && c <= 122);
 }
 
-if (str[i] == ' ')
+/**
+ * isDelimiter - determines whether ascii is a delimiter
+ * @c: character
+ * Return: 1 if true, 0 if false
+ */
+int isDelimiter(char c)
 {
-i++;
-if (str[i] >= 97 && str[i] <= 122)
-{
-str[i] = str[i] - 32;
-}
-}
-else
-{
-if (str[i] >= 65 && str[i] <= 90)
-str[i] = str[i] + 32;
+	int i;
+	char delimiter[] = " \t\n,.!?\"(){}";
+
+	for (i = 0; i < 12; i++)
+		if (c == delimiter[i])
+			return (1);
+	return (0);
 }
 
-return (0);
+/**
+ * cap_string - capitalizes all words of a string
+ * @s: input string
+ * Return: string with capitalized words
+ */
+char *cap_string(char *s)
+{
+	char *ptr = s;
+	int foundDelimit = 1;
+
+	while (*s)
+	{
+		if (isDelimiter(*s))
+			foundDelimit = 1;
+		else if (isLower(*s) && foundDelimit)
+		{
+			*s -= 32;
+			foundDelimit = 0;
+		}
+		else
+			foundDelimit = 0;
+		s++;
+	}
+	return (ptr);
 }

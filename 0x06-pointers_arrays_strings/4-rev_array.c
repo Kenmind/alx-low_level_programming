@@ -1,23 +1,33 @@
 #include "main.h"
 
 /**
- * reverse_array - reverses an array of integers
- * @a: pointer to array
- * @n: number of elements in array
- * Return: void
+ * swap_int - swaps the value of two integers
+ * @a: pointer a
+ * @b: pointer b
+ */
+void swap_int(int *a, int *b)
+{
+	*a = *b + *a;
+	*b = *a - *b;
+	*a = *a - *b;
+}
+
+/**
+ * reverse_array - reverses the contents of an array of integers
+ * @a: array of integers
+ * @n: number of elements
  */
 
 void reverse_array(int *a, int n)
 {
-int i;
+	int counter = 0;
 
-while (i < n)
-{
-int temp = a[i];
-a[i] = a[n];
-a[n] = temp;
-i++;
-n--;
-}
+	while (counter < n / 2)
+	{
+		/*if you have an  array of n elements the last element is at n - 1*/
+		swap_int(a + counter, a + (n - counter - 1));
+		counter++;
+	}
+
 
 }

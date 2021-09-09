@@ -1,4 +1,24 @@
+#include <stdio.h>
 #include "main.h"
+
+/**
+* _strlen - returns the of a string
+* @str: a string whose length is returned
+* Return: length of string
+*/
+
+int _strlen(char *str)
+{
+int length = 0;
+
+while (*str)
+{
+str++;
+length++;
+}
+return (length);
+}
+
 
 /**
 * _strcat - Appends the src string to the dest string

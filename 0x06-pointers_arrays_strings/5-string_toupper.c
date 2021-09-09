@@ -2,17 +2,19 @@
 
 /**
 * string_toupper - changes lowercase letters of a string to uppercase
-* @str: string
+* @s: string
 * Return: 0
 */
 
-char *string_toupper(char *str)
+char *string_toupper(char *s)
 {
-int i;
+	char *ptr = s;
 
-while (i >= 97 && i <= 122)
-{
-str[i] = str[i] - 32;
-}
-return (0);
+	while (*s)
+	{
+		if (*s >= 97 && *s <= 122)
+			*s -= 32;
+		s++;
+	}
+	return (ptr);
 }

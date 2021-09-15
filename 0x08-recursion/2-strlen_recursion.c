@@ -17,4 +17,5 @@ _strlen_recursion(s + 1);
 }
 else
 return (i);
+return (0);
 }

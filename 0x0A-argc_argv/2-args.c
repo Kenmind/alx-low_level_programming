@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
-* main - Prints all arguments it receives including the first one ending with a new line
+* main - Prints all arguments it receives including the first one
 * @argc: count of arguments passed into the program
 * @argv: array of arg c
+* Return: 0, always
 */
 
 int main(int argc, char *argv[])

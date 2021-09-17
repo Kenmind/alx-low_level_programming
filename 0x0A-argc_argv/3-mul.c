@@ -5,7 +5,7 @@
  * main - prints the result of two multiplied numbers
  * @argc: argument count
  * @argv: argugument vector
- * return: 1 on fail else 0
+ * Return: 0 on success else 1
  */
 
 int main(int argc, char *argv[])

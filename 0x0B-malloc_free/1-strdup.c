@@ -33,9 +33,8 @@ char *_strdup(char *str)
 	if (!str)
 		return (NULL);
 
-	ptr = malloc((_strlen(str) + 1) * sizeof(char *));
-	/* provided there's low memory */
-
+	ptr = malloc(_strlen(str) * sizeof(char *));
+	
 	if (!ptr)
 		return (NULL);
 	_ptr = ptr;

@@ -83,7 +83,7 @@ char **strtow(char *str)
 		start = startIndex(str, j);
 		end = endIndex(str, start);
 		len = end - start;
-		ptr[i] = malloc(sizeof(char) * (len + 1));
+		ptr[i] = malloc(sizeof(char) * len);
 		if (!ptr[i])
 		{
 			i -= 1;

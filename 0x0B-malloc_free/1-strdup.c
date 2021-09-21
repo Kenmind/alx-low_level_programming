@@ -47,4 +47,5 @@ char *_strdup(char *str)
 		_ptr++;
 	}
 	_ptr = '\0';
+	return (ptr);
 }

@@ -1,6 +1,6 @@
 #ifndef FUNCTION_LIKE_MACRO_H
 #define FUNCTION_LIKE_MACRO_H
-#define ABS(x) do {\
-	x = (-1) * x;\
-} while (x < 0)
+
+#define ABS(x) ((x) < 0 ? -(x) : (x))
+
 #endif /* !FUNCTION_LIKE_MACRO_H */

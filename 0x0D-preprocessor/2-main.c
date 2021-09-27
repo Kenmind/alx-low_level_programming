@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "dog.h"
+#include <stdlib.h>
 
 /**
  * main - prints name of the file it was compiled from followed by a newline

@@ -7,13 +7,14 @@
  *  Return: Address of new node else NULL
  */
 
-list_t add_node_end(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	char *ptr;
+	char __attribute__((unused))*ptr;
 	int len;
 	list_t *node, *end;
 
 	node = malloc(sizeof(list_t));
+	ptr = strdup(str);
 
 	if (node == NULL)
 	{
@@ -23,7 +24,7 @@ list_t add_node_end(list_t **head, const char *str)
 	for (len = 0; str[len];)
 		len++;
 
-	node->str = ptr;
+	ptr = node->str;
 	node->len = len;
 	node->next = NULL;
 

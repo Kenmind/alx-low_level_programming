@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 /**
  * main - generates password for cracme
  * Return: 0
  */
+
 
 int main(void)
 {

@@ -11,17 +11,17 @@
 
 int main(void)
 {
-	char a[10], c[10];
+	char argv[10], c[10];
 	int i = 0, j = 0, k = 0;
 
 	while (!k)
-		k = strlen(a);
+		k = strlen(argv);
 	i = k;
 	j = 0;
-	a[i] = k;
+	argv[i] = k;
 	while (i >= 0)
 	{
-		c[j] = a[i] + i;
+		c[j] = argv[i] + i;
 		i--;
 		j++;
 	}

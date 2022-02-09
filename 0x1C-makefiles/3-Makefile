@@ -6,7 +6,7 @@ CLEANED = *~
 RM = rm -f
 
 all : ${OBJ}
-	${CC} ${OBJ} -o ${NAME}
+	${CC}	${OBJ} -o ${NAME}
 
 fclean : oclean clean
 

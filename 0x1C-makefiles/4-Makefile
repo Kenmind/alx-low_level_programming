@@ -6,15 +6,18 @@ CLEANED = *~
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+%.o: %.c m.h
+	${CC} ${CFLAGS} -c $< -o $@
+
 all : ${OBJ}
-	${CC} ${CFLAGS}	${OBJ} -o ${NAME}
-
-fclean : oclean clean
-
-oclean :
-	${RM} ${OBJ}
+	${CC} ${SRC} -o ${NAME}
 
 clean :
-	${RM} ${OBJ}
+	${RM} ${CLEANED} ${NAME}
+
+oclean :
+	${RM} -f ${OBJ}
+
+fclean: clean oclean
 
 re : oclean all

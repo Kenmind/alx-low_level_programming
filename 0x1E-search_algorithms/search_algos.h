@@ -41,7 +41,7 @@ typedef struct skiplist_s
 	int n;
 	size_t index;
 	struct skiplist_s *next;
-	struct skiplist *express;
+	struct skiplist_s *express;
 } skiplist_t;
 
 /* FUNCTION PROTOTYPES */

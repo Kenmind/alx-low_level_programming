@@ -11,7 +11,7 @@ void mini_array(int *arr, size_t min, size_t max)
 {
 	size_t i = 0;
 
-	printf("Search in array: ");
+	printf("Searching in array: ");
 	for (i = min; i < max; i++)
 		printf("%d, ", arr[i]);
 	printf("%d\n", arr[i]);
